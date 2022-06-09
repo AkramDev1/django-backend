@@ -432,7 +432,8 @@ def projectNameWithCountTachesStatus1(request,idPro=0):
         cursor.execute(
             "select count(tache.id) as total,pro.title "+
             "from app_tache as tache,app_project as pro "+
-            "where tache.project_id=pro.id and tache.statut='In Progress' and pro.id="+idPro+" "+
+            "where tache.project_id=pro.id and tache.statut='In Progress' and pro.id="+idPro
+            +" "+
             "group by pro.title"
         )
         total=cursor.fetchone()
@@ -445,6 +446,7 @@ def projectNameWithCountTachesStatus2(request,idPro=0):
         cursor.execute(
             "select count(tache.id) as total,pro.title "+
             "from app_tache as tache,app_project as pro "+
+            # "where tache.project_id=pro.id and tache.statut='In Completed' and pro.id="+idPro
             "where tache.project_id=pro.id and tache.statut='In Completed' and pro.id="+idPro+" "+
            "group by pro.title"
         )
@@ -458,7 +460,8 @@ def projectNameWithCountTachesStatus3(request,idPro=0):
         cursor.execute(
             "select count(tache.id) as total,pro.title "+
             "from app_tache as tache,app_project as pro "+
-            "where tache.project_id=pro.id and tache.statut='Completed' and pro.id="+idPro+" "+
+            "where tache.project_id=pro.id and tache.statut='Completed' and pro.id="+idPro
+            +" "+
            "group by pro.title"
         )
         total=cursor.fetchone()
