@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure--9sv8@#2%4jyw@bp#j4xpyuxk=9@js%yu266vxzurt=c^*zp06
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://earnest-smakager-98e38b.netlify.app']
 CORS_ALLOW_ALL_ORIGINS = True
 # CSRF_COOKIE_SECURE = True
 # SESSION_COOKIE_SECURE = True
