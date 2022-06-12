@@ -26,7 +26,12 @@ SECRET_KEY = 'django-insecure--9sv8@#2%4jyw@bp#j4xpyuxk=9@js%yu266vxzurt=c^*zp06
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:4200',
+    'https://earnest-smakager-98e38b.netlify.app',
+    'https://azure-django-backend.azurewebsites.net',
+]
+# CORS_ALLOW_ALL_ORIGINS = True
 # CSRF_COOKIE_SECURE = True
 # SESSION_COOKIE_SECURE = True
 # CSRF_COOKIE_SAMESITE = 'None'
